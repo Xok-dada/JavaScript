@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 判断是否是闰年
+        // 个人方法：
+        // function leapyear(year){
+        //     if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+        //         console.log(year + '是闰年');
+        //     }else{
+        //         console.log(year + '不是闰年');
+        //     }
+        //     return year;
+        // }
+        // leapyear(2004);
+        // leapyear(1991);
+
+        // 教学方法：
+        function isRunYear(year){
+            // 闰年返回true  否则返回 false
+            var flag = false;
+            if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+                flag = true;
+            }
+            return flag;
+        }
+        var year1 = isRunYear(2004);
+        var year2 = isRunYear(1991);
+        console.log(year1);
+        console.log(year2);
+
+    </script>
+</body>
+</html>

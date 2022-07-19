@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = 'abaasdffggghhjjkkgfddssssss344343';
+
+        //输出字符串长度 
+        console.log('字符串的长度为' + str.length);
+        
+        // 取出指定位置的字符
+        // console.log(str.charAt(0));
+        // console.log(str.charAt(3));
+        // console.log(str.charAt(5));
+        // console.log(str.charAt(9));
+        console.log(str.charAt(0) + str.charAt(3) + str.charAt(5) + str.charAt(9));
+
+        // 该字符串中是否存在指定字符，例:i,c,b
+        function exist(str1, chars) {
+            if (str1.indexOf(chars) != -1){
+                console.log(chars + '存在');
+            }else{
+                console.log(chars + '不存在');
+            }
+            }
+            exist(str, 'i');
+            exist(str, 'c');
+            exist(str, 'b');
+
+        //替换指定字符，例：g替换为22，ss替换为b
+        console.log(str);
+        while (str.indexOf('g') != -1 || str.indexOf('ss') != -1) {
+            str = str.replace('g', '22');
+            str = str.replace('ss', 'b');
+        }
+        console.log(str);
+
+        // 截取字符串
+        console.log(str.substr(1,5));
+
+        // 找出字符串中出现次数最多的字符和出现的次数
+         var obj = {};
+         for (var i=0;i<str.length;i++){
+            var chars = str.charAt(i);
+            if(obj[chars]){
+                obj[chars] ++;
+            }else{
+                obj[chars] = 1
+            }
+         }
+         console.log(obj);
+
+         var max = 0;
+         var ch = '';
+         for(var k in obj){
+            // k 得到的是属性名
+            // obj[k] 得到的是属性值
+            if(obj[k] > max){
+                max = obj[k];
+                ch = k;
+            }
+        }
+        console.log('出现最多的字符:' + ch);
+        console.log('次数:' + max);
+
+    </script>
+</body>
+</html>

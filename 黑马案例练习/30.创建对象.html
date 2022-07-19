@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1、利用函数字面量创建对象
+        var dog = {
+            name:'可可',
+            type:'阿拉斯加犬',
+            age:'5岁',
+            color:'棕红色',
+            skills:function (){
+                console.log('bark' + 'and' + 'showFilm');
+            }
+        }
+        console.log(dog.name);
+        console.log(dog.type);
+        console.log(dog.age);
+        console.log(dog.color);
+        dog.skills();
+
+        // 2、利用new object创建对象
+        // var obj = new Object();
+        // obj.uname = '张三丰';
+        // obj.age = 18;
+        // obj.sex = '男';
+        // obj.sayHi = function(){
+        //     console.log('hi~');
+        // }
+        // obj.sayHi()
+
+        var obj = new Object();
+        obj.name = '鸣人';
+        obj.sex = '男';
+        obj.age = '19岁';
+        obj.skill = '影分身术';
+
+        console.log(obj.name);
+
+        // 3、构造函数创建对象
+        // 构造函数名字首字母大写；构造函数不需要return就可以返回结果
+        // 只要new Star() 调用函数就创建一个对象
+        // 调用构造函数必须使用new；属性方法前面必须添加this
+        function Star(uname,age,sex){  
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+        }
+        var ldh = new Star('刘德华','18','男');  //调用函数返回的是一个对象
+        var gfc = new Star('郭富城',20,'男');
+        console.log(ldh);
+        console.log(gfc);
+
+
+        function Hero(name,type,blood,attack){
+            this.name = name;
+            this.type = type;
+            this.blood = blood;
+            this.attack = attack;
+        }
+        var lp = new Hero('廉颇','力量型','500血量','近战');
+        var hy = new Hero('后裔','射手型','100血量','远程');
+        var kai = new Hero('凯','综合型','300血量','近战');
+        console.log(lp);
+        console.log(hy);
+        console.log(kai);
+    </script>
+</body>
+</html>

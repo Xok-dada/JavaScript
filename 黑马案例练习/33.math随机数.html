@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Math对象随机数方法   Math.random()返回一个随机的小数   0<= x < 1
+        console.log(Math.random());
+
+        // 得到一个大于等于 0，小于 1 之间的随机数
+        function getRandom() {
+            return Math.random();
+        }
+        console.log(getRandom());
+
+        // 得到一个两数之间的随机数
+        function getRandomArbitrary(min, max) {
+            return Math.random() * (max - min) + min;
+        }
+        console.log(getRandomArbitrary(1,10));
+
+        // 得到一个两数之间的随机整数
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+        }
+        console.log(getRandomInt(1,10));
+
+        // 得到一个两数之间的随机整数，包括两个数在内
+        function getRandomIntInclusive(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min; //含最大值，含最小值 
+        }
+        console.log(getRandomIntInclusive(1,10));
+    </script>
+</body>
+</html>

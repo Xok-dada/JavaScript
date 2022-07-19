@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1、函数求两个数的最大值
+        // 方法一：
+        // function getmax(num1,num2){
+        //     if(num1 > num2){
+        //         return num1;
+        //     }else{
+        //         return num2;
+        //     }
+        // }
+        // console.log(getmax(12,83));
+        // 方法二：三元表达式
+        // function getmax(num1,num2){
+        //     return num1 > num2 ? num1 : num2;
+        // }
+        // console.log(getmax(12,83));
+
+        // 2、求任意数组中的最大值  [5,2,99,101,67,77];
+        function getArrMax(arr){
+            var max = arr[0];
+            for(var i=1;i<=arr.length;i++){
+                if(arr[i]>max){
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        console.log(getArrMax([5,2,99,101,67,77]));
+        
+
+
+    </script>
+</body>
+</html>

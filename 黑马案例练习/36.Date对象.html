@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // // Date() 日期对象  是一个构造函数  必须使用new 调用创建日期对象
+        // var arr = new Array(); //创建一个数组对象
+        // var obj = new Object(); //创建一个对象实例
+        // // 1、使用Date  没有参数，返回当前时间
+        // var date = new Date();
+        // console.log(date);
+        // // 2、参数常用写法  数字型  2022，06，01 或者 字符串型 '2022-06-01'
+        // var date1 = new Date(2022,06,01);
+        // console.log(date1);  //显示七月，比参数大一
+        // var date2 = new Date('2022-06-01');
+        // console.log(date2);
+
+        // 格式化日期   年-月-日
+        // var date = new Date();
+        // console.log(date.getFullYear());  //返回当前日期的年
+        // console.log(date.getMonth()+1);   //月份(比实际小一)
+        // console.log(date.getDate());  //返回几号
+        // console.log(date.getDay());   //周日返回0
+        
+        // var year = date.getFullYear();
+        // var month = date.getMonth()+1;
+        // var da = date.getDate();     //变量名不能和date冲突，否则报错
+        // var arr = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        // var day = date.getDay();
+        // console.log('今天是：' + year + '年' + month + '月' + da + '日' + arr[day]);
+
+        // 格式化  时-分-秒
+        var date = new Date();
+        console.log(date.getHours());   //时
+        console.log(date.getMinutes());  //分
+        console.log(date.getSeconds());   // 秒
+
+        // 封装一个函数，返回时分秒
+        function getTime(){
+            var time = new Date();
+            var h = time.getHours();
+            h = h < 10 ? '0' + h : h;    //小于10 前面补零
+            var m = time.getMinutes();
+            m = m < 10 ? '0' + m : m;
+            var s = time.getSeconds();
+            s = s < 10 ? '0' + s : s;
+            return h + ':' + m + ':' + s;
+        }
+        console.log(getTime());
+    </script>
+</body>
+</html>
